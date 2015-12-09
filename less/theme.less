@@ -13,279 +13,292 @@
 
 
 //
-// Buttons
+// google fonts
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(https://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v9/CcKI4k9un7TZVWzRVT-T8_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaI_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+
 // --------------------------------------------------
 
-// Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
+// Common style
 
-  // Reset the shadow
-  &:active,
-  &.active {
-    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-  }
 
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    .box-shadow(none);
-  }
-
-  .badge {
-    text-shadow: none;
-  }
+*{
+  outline:none !important;
+}
+body
+{
+  margin:0;
+  padding:0;
+  outline:none;
+  font-family: "Raleway", sans-serif;
+}
+a
+{
+  color:#333;
+  text-decoration:none
+}
+a:hover,a:focus
+{
+  text-decoration:none;
+}
+ul{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+.header {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  padding: 30px 0;
+  width: 100%;
 }
 
-// Mixin for generating new styles
-.btn-styles(@btn-color: #555) {
-  #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
-  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
-  background-repeat: repeat-x;
-  border-color: darken(@btn-color, 14%);
+.navbar {
+  border: 0 none;
+  margin: 0;
+  min-height: auto;
+}
+.navbar-header
+{
 
-  &:hover,
-  &:focus  {
-    background-color: darken(@btn-color, 12%);
-    background-position: 0 -15px;
-  }
 
-  &:active,
-  &.active {
-    background-color: darken(@btn-color, 12%);
-    border-color: darken(@btn-color, 14%);
-  }
+}
+.navbar-toggle
+{
 
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-      background-color: darken(@btn-color, 12%);
-      background-image: none;
-    }
-  }
+
+}
+.navbar-brand {
+  height: auto;
+  margin: 0 !important;
+  padding: 0;
+}
+.main_ul {
+  float: right;
+}
+.main_ul li:last-child a
+{
+  background:black;
+  color:#fff;
 }
 
-// Common styles
-.btn {
-  // Remove the gradient for the pressed/active state
-  &:active,
-  &.active {
-    background-image: none;
-  }
+.main_ul li a {
+  color: #8b8b8b;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 37px;
+  margin-left: 14px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.main_ul li a:hover
+{
+
+}
+.slider_area {
+  background: #eaeaea url("../images/banner-bg.jpg") repeat-x scroll center bottom;
+  display: flex;
+  float: left;
+  height: 510px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.main_content {
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+}
+.page_content {
+  float: left;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  width: 100%;
+}
+.head_2 {
+  background: transparent url("../images/border1.jpg") no-repeat scroll center bottom;
+  color: #000;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+}
+.big_pg {
+  color: #636363;
+  font-size: 18px;
+}
+.portfolio_list {
+  float: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.portfolio_list ul
+{
+
+
+}
+.portfolio_list ul li {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 25%;
+}
+.portfolio_list ul li img {
+  width: 100%;
+  transition: all 0.4s ease 0s;
+}
+.portfolio_info {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  bottom: 0;
+  display: block;
+  left: 0;
+  opacity: 0;
+  padding: 30% 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transform: scale(2.5);
+  transition: all 0.4s ease 0s;
+}
+.portfolio_list ul li:hover img
+{
+  transform: scale(1.1);
 }
 
-// Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
-.btn-primary { .btn-styles(@btn-primary-bg); }
-.btn-success { .btn-styles(@btn-success-bg); }
-.btn-info    { .btn-styles(@btn-info-bg); }
-.btn-warning { .btn-styles(@btn-warning-bg); }
-.btn-danger  { .btn-styles(@btn-danger-bg); }
+.portfolio_list ul li:hover .portfolio_info{
+  opacity: 1;
+  transform: scale(1);
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+}
+.portfolio_info h3 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+}
+.portfolio_info a {
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 9px;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  transition: all 0.5s ease 0s;
+}
+.portfolio_info a:hover {
+  background:#fff;
+  color:#000;
+}
+.full_view_more {
+  background: #000000 none repeat scroll 0 0;
+  color: #afafaf;
+  display: inline-block;
+  font-size: 16px;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+}
+.full_view_more:hover{
 
-
-//
-// Images
-// --------------------------------------------------
-
-.thumbnail,
-.img-thumbnail {
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
+  color:#fff;
 }
 
-
-//
-// Dropdowns
-// --------------------------------------------------
-
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  #gradient > .vertical(@start-color: @dropdown-link-hover-bg; @end-color: darken(@dropdown-link-hover-bg, 5%));
-  background-color: darken(@dropdown-link-hover-bg, 5%);
+.header_text {
+  align-self: center;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
-  background-color: darken(@dropdown-link-active-bg, 5%);
-}
-
-
-//
-// Navbar
-// --------------------------------------------------
-
-// Default navbar
-.navbar-default {
-  #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);
-  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
-  border-radius: @navbar-border-radius;
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
-
-  .navbar-nav > .open > a,
-  .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: darken(@navbar-default-link-active-bg, 5%); @end-color: darken(@navbar-default-link-active-bg, 2%));
-    .box-shadow(inset 0 3px 9px rgba(0,0,0,.075));
-  }
-}
-.navbar-brand,
-.navbar-nav > li > a {
-  text-shadow: 0 1px 0 rgba(255,255,255,.25);
+.header_text h5
+{
+  color: #fff;
+  display: block;
+  font: 500 72px/72px "Roboto",sans-serif;
+  margin: 0 0 35px;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
-// Inverted navbar
-.navbar-inverse {
-  #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
-  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered; see https://github.com/twbs/bootstrap/issues/10257
-  border-radius: @navbar-border-radius;
-  .navbar-nav > .open > a,
-  .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: @navbar-inverse-link-active-bg; @end-color: lighten(@navbar-inverse-link-active-bg, 2.5%));
-    .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));
-  }
-
-  .navbar-brand,
-  .navbar-nav > li > a {
-    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  }
+.header_text span {
+  color: #fff;
+  display: block;
+  font-size: 27px;
+  padding: 0 0 15px;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
-
-// Undo rounded corners in static and fixed navbars
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  border-radius: 0;
+.header_text h5 {
+  color: #fff;
+  display: block;
+  font-family: arial;
+  font-size: 51px;
+  font-weight: 700;
+  margin: 0 0 45px;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
-
-// Fix active state of dropdown items in collapsed mode
-@media (max-width: @grid-float-breakpoint-max) {
-  .navbar .navbar-nav .open .dropdown-menu > .active > a {
-    &,
-    &:hover,
-    &:focus {
-      color: #fff;
-      #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
-    }
-  }
-}
-
-
-//
-// Alerts
-// --------------------------------------------------
-
-// Common styles
-.alert {
-  text-shadow: 0 1px 0 rgba(255,255,255,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
-  .box-shadow(@shadow);
-}
-
-// Mixin for generating new styles
-.alert-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 7.5%));
-  border-color: darken(@color, 15%);
-}
-
-// Apply the mixin to the alerts
-.alert-success    { .alert-styles(@alert-success-bg); }
-.alert-info       { .alert-styles(@alert-info-bg); }
-.alert-warning    { .alert-styles(@alert-warning-bg); }
-.alert-danger     { .alert-styles(@alert-danger-bg); }
-
-
-//
-// Progress bars
-// --------------------------------------------------
-
-// Give the progress background some depth
-.progress {
-  #gradient > .vertical(@start-color: darken(@progress-bg, 4%); @end-color: @progress-bg)
-}
-
-// Mixin for generating new styles
-.progress-bar-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 10%));
-}
-
-// Apply the mixin to the progress bars
-.progress-bar            { .progress-bar-styles(@progress-bar-bg); }
-.progress-bar-success    { .progress-bar-styles(@progress-bar-success-bg); }
-.progress-bar-info       { .progress-bar-styles(@progress-bar-info-bg); }
-.progress-bar-warning    { .progress-bar-styles(@progress-bar-warning-bg); }
-.progress-bar-danger     { .progress-bar-styles(@progress-bar-danger-bg); }
-
-// Reset the striped class because our mixins don't do multiple gradients and
-// the above custom styles override the new `.progress-bar-striped` in v3.2.0.
-.progress-bar-striped {
-  #gradient > .striped();
-}
-
-
-//
-// List groups
-// --------------------------------------------------
-
-.list-group {
-  border-radius: @border-radius-base;
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);
-  #gradient > .vertical(@start-color: @list-group-active-bg; @end-color: darken(@list-group-active-bg, 7.5%));
-  border-color: darken(@list-group-active-border, 7.5%);
-
-  .badge {
-    text-shadow: none;
-  }
+.header_text h5 b{
+  color:#FAA61A;
+  font-weight:700;
 }
 
 
-//
-// Panels
-// --------------------------------------------------
 
-// Common styles
-.panel {
-  .box-shadow(0 1px 2px rgba(0,0,0,.05));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+
 }
+@media (min-width: 768px) {
 
-// Mixin for generating new styles
-.panel-heading-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 5%));
+
 }
+@media (min-width: 992px) {
 
-// Apply the mixin to the panel headings only
-.panel-default > .panel-heading   { .panel-heading-styles(@panel-default-heading-bg); }
-.panel-primary > .panel-heading   { .panel-heading-styles(@panel-primary-heading-bg); }
-.panel-success > .panel-heading   { .panel-heading-styles(@panel-success-heading-bg); }
-.panel-info > .panel-heading      { .panel-heading-styles(@panel-info-heading-bg); }
-.panel-warning > .panel-heading   { .panel-heading-styles(@panel-warning-heading-bg); }
-.panel-danger > .panel-heading    { .panel-heading-styles(@panel-danger-heading-bg); }
+}
+@media (min-width: 1200px) {
 
-
-//
-// Wells
-// --------------------------------------------------
-
-.well {
-  #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);
-  border-color: darken(@well-bg, 10%);
-  @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
-  .box-shadow(@shadow);
 }
